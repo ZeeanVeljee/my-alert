@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<plugin xmlns = "http://apache.org/cordova/ns/plugins/1.0" id = "cordova-plugin-my-alert" version = "1.0.0">
+<name>Alert</name>
+<description>Cordova plugin that displays an alert</description>
+<engines>
+    <engine name = "cordova" version = ">=3.6.0" />
+</engines>
+<js-module src = "www/index.js" name = "Alert">
+    <clobbers target = "Alert" />
+</js-module>
+
+<platform name = "ios">
+    <config-file target = "config.xml", parent="/*">
+        <feature name = "Alert">
+            <param name = "ios-package" value = "Alert" />
+        </feature>
+    </config-file>
+    <source-file src = "src/ios/Alert.swift" />
+</platform>
+
+</plugin>
